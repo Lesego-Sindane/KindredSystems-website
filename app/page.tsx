@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactForm from "./ContactForm";
 
 const whatsappNumber = "27693368407";
 const whatsappMessage = encodeURIComponent(
@@ -370,38 +371,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <form
-            action="mailto:infokindredsystems@gmail.com"
-            method="post"
-            encType="text/plain"
-            className="rounded-lg border border-ink/10 bg-white p-6 shadow-soft sm:p-8"
-          >
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="grid gap-2 text-sm font-semibold text-ink/75">
-                Name
-                <input className="h-12 rounded-md border border-ink/12 px-4 outline-none transition focus:border-forest" name="name" />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-ink/75">
-                Email
-                <input className="h-12 rounded-md border border-ink/12 px-4 outline-none transition focus:border-forest" name="email" type="email" />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-ink/75 sm:col-span-2">
-                Business Name
-                <input className="h-12 rounded-md border border-ink/12 px-4 outline-none transition focus:border-forest" name="business" />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-ink/75 sm:col-span-2">
-                Message
-                <textarea className="min-h-36 rounded-md border border-ink/12 p-4 outline-none transition focus:border-forest" name="message" />
-              </label>
-            </div>
-            <button
-              type="submit"
-              className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-forest px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0f3932] sm:w-auto"
-            >
-              Let's Talk
-              <ArrowIcon />
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
