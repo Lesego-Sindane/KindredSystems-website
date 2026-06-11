@@ -1,39 +1,46 @@
-const typeformHref = "https://form.typeform.com/to/jGuda96s";
-
-function ArrowIcon() {
-  return (
-    <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M5 12h14m-6-6 6 6-6 6"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+const whatsappNumber = "27693368407";
+const whatsappMessage = encodeURIComponent(
+  "Hi Kindred Systems, I'd like to learn more about your solutions."
+);
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+const emailAddress = "infokindredsystems@gmail.com";
 
 export default function ContactForm() {
   return (
-    <div className="overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
-      <iframe
-        src={typeformHref}
-        title="Kindred Systems enquiry form"
-        className="h-[640px] w-full border-0"
-        allow="camera; microphone; autoplay; encrypted-media;"
-      />
-      <div className="border-t border-ink/10 bg-porcelain p-5">
+    <div className="rounded-xl border border-ink/10 bg-white p-6 shadow-soft sm:p-8">
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-moss">
+        Contact options
+      </p>
+      <h3 className="mt-4 text-2xl font-semibold text-ink sm:text-3xl">
+        Start with a quick conversation
+      </h3>
+      <p className="mt-4 text-base leading-7 text-ink/70">
+        We remove the friction from enquiries and bookings so your team can
+        focus on serving customers, not chasing messages.
+      </p>
+
+      <div className="mt-8 space-y-3">
         <a
-          href={typeformHref}
+          href={whatsappHref}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-forest px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0f3932] sm:w-auto"
+          className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-forest px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0f3932]"
         >
-          Open Enquiry Form
-          <ArrowIcon />
+          Chat on WhatsApp
+        </a>
+        <a
+          href={`mailto:${emailAddress}`}
+          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-ink/10 bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30"
+        >
+          Email {emailAddress}
         </a>
       </div>
+
+      <ul className="mt-8 space-y-3 text-sm text-ink/75">
+        <li>• Faster response times for leads and appointments.</li>
+        <li>• Clear enquiry capture without manual follow-up.</li>
+        <li>• A simple path to discuss your next growth system.</li>
+      </ul>
     </div>
   );
 }
