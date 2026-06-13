@@ -55,7 +55,7 @@ const pricingPlans = [
   {
     name: "Starter",
     price: "R800",
-    note: "Once-off setup",
+    note: "For professional early-stage businesses",
     headline: "WhatsApp Business App + Social Media Automation",
     description:
       "For informal and early-stage businesses ready to stop missing customers.",
@@ -176,6 +176,21 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
       <path
         d="M9 8.7c.2-.4.4-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.7 2.1 3 2.7l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.8-.7.3-1.5.3-2.5 0a8.4 8.4 0 0 1-5.6-5.5c-.3-.9-.3-1.6-.1-2Z"
         fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function WhatsAppLogoIcon({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
+      <path
+        d="M12.01 2.75A9.25 9.25 0 1 0 12.01 21.25 9.25 9.25 0 0 0 12.01 2.75Z"
+        fill="currentColor"
+      />
+      <path
+        d="M15.48 14.08c-.14-.09-.64-.31-.79-.35-.15-.04-.26-.02-.38.08-.11.1-.46.47-.56.62-.11.15-.2.17-.35.08-.15-.09-.64-.29-1.22-.9-.56-.59-.93-1.33-.94-1.57 0-.24 0-.35.1-.46.1-.11.22-.2.34-.31.11-.11.15-.17.22-.29.07-.12.04-.21-.02-.31-.06-.11-.42-.95-.56-1.3-.13-.35-.28-.31-.4-.31h-.23c-.14 0-.35.05-.56.25-.21.2-.67.74-.67 1.78 0 1.03.72 1.87.84 2.01.11.14 1.25 1.89 3.08 2.58.42.15.78.24 1.02.31.51.13.96.12 1.27-.02.31-.13.8-.41.93-.83.14-.42.11-.77 0-.88-.1-.11-.23-.19-.43-.3Z"
+        fill="#fff"
       />
     </svg>
   );
@@ -361,7 +376,16 @@ export default function Home() {
                   {plan.note}
                 </p>
                 <h3 className="mt-4 text-3xl font-semibold text-white">{plan.name}</h3>
-                <p className="mt-2 text-sm text-white/70">{plan.price}</p>
+                <p className="mt-2 text-sm text-white/70">
+                  {plan.name === "Starter" ? (
+                    <>
+                      {plan.price}
+                      <span className="ml-2 text-brass">• Once-Off setup</span>
+                    </>
+                  ) : (
+                    plan.price
+                  )}
+                </p>
                 <h4 className="mt-6 text-xl font-semibold text-white">{plan.headline}</h4>
                 <p className="mt-4 text-white/75">{plan.description}</p>
                 <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
@@ -376,8 +400,8 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-8 pt-2">
-                  <Button href={whatsappHref} variant="secondary">
-                    Request A Quote
+                  <Button href="#contact" variant="secondary">
+                    Get started
                     <ArrowIcon />
                   </Button>
                 </div>
@@ -510,7 +534,7 @@ export default function Home() {
         className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#1f8f5f] text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#16754d]"
         aria-label="Chat with Kindred Systems on WhatsApp"
       >
-        <WhatsAppIcon className="h-5 w-5 translate-y-[-1px]" />
+        <WhatsAppLogoIcon className="h-6 w-6" />
       </a>
     </main>
   );

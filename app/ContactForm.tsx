@@ -1,10 +1,3 @@
-const whatsappNumber = "27693368407";
-const whatsappMessage = encodeURIComponent(
-  "Hi Kindred Systems, I'd like to learn more about your solutions."
-);
-const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-const emailAddress = "infokindredsystems@gmail.com";
-
 export default function ContactForm() {
   return (
     <div className="rounded-xl border border-ink/10 bg-white p-6 shadow-soft sm:p-8">
@@ -18,23 +11,6 @@ export default function ContactForm() {
         We remove the friction from enquiries and bookings so your team can
         focus on serving customers, not chasing messages.
       </p>
-
-      <div className="mt-8 space-y-3">
-        <a
-          href={whatsappHref}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-forest px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0f3932]"
-        >
-          Chat on WhatsApp
-        </a>
-        <a
-          href={`mailto:${emailAddress}`}
-          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-ink/10 bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30"
-        >
-          Email {emailAddress}
-        </a>
-      </div>
 
       <div className="mt-8 rounded-2xl border border-ink/10 bg-linen/70 p-3 shadow-soft">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-moss">
