@@ -6,6 +6,7 @@ const whatsappMessage = encodeURIComponent(
   "Hi Kindred Systems, I'd like to learn more about your solutions."
 );
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+const emailAddress = "infokindredsystems@gmail.com";
 
 const navItems = [
   ["Outcomes", "#outcomes"],
@@ -50,18 +51,87 @@ const outcomes = [
   }
 ];
 
-const services = [
+const pricingPlans = [
   {
-    title: "Customer Enquiry System",
-    body: "Capture, organize, and manage customer enquiries with a more dependable intake experience."
+    name: "Starter",
+    price: "R800",
+    note: "Once-off setup",
+    headline: "WhatsApp Business App + Social Media Automation",
+    description:
+      "For informal and early-stage businesses ready to stop missing customers.",
+    details: [
+      "WhatsApp Business App setup and optimisation",
+      "Quick replies and FAQ auto-responses",
+      "Booking link connected to your bio and auto-replies",
+      "Lead tracking via Google Sheets",
+      "Handover and walkthrough"
+    ]
   },
   {
-    title: "Booking & Scheduling System",
-    body: "Reduce admin work, protect response times, and fill your calendar more efficiently."
+    name: "Growth",
+    price: "R1500 setup + R500/month",
+    note: "For businesses ready for a real system",
+    headline: "WhatsApp Cloud API + Booking Automation + Lead Capture",
+    description:
+      "For semi-formal businesses that are growing and need more than the basics.",
+    details: [
+      "Everything in Starter",
+      "WhatsApp Cloud API setup and integration",
+      "Automated lead capture and ranked lead list",
+      "Booking calendar with real-time availability",
+      "24-hour automated follow-up if a customer goes quiet",
+      "Monthly maintenance and optimisation",
+      "API costs covered in retainer"
+    ]
   },
   {
-    title: "Growth Operations System",
-    body: "Connect customer touchpoints into a cleaner experience that helps convert more leads."
+    name: "Pro",
+    price: "R3500 setup + R1000/month",
+    note: "For businesses that mean business",
+    headline: "Full API + CRM + Unified Inbox + Monthly Reporting",
+    description:
+      "For registered SMEs and franchises that need a complete customer operations system.",
+    details: [
+      "Everything in Growth",
+      "Full CRM integration and sync",
+      "Unified inbox across all active channels",
+      "Monthly performance report",
+      "Priority support and system updates",
+      "All API and platform costs covered in retainer"
+    ]
+  }
+];
+
+const addOns = [
+  {
+    title: "Facebook DM Automation",
+    body: "Auto-respond to page messages and capture leads",
+    price: "R500 once-off"
+  },
+  {
+    title: "Instagram DM Automation",
+    body: "Reply to DMs and story replies automatically",
+    price: "R500 once-off"
+  },
+  {
+    title: "Meta Unified Inbox",
+    body: "Both channels, one bot logic",
+    price: "R800 once-off (save R200)"
+  },
+  {
+    title: "Google Review Requester",
+    body: "Auto-send a review request after every booking",
+    price: "R200 once-off"
+  },
+  {
+    title: "Promo Broadcasts",
+    body: "Send bulk WhatsApp messages to your lead list",
+    price: "R80/broadcast"
+  },
+  {
+    title: "Landing Page",
+    body: "A one-page website to link your leads to for more info.",
+    price: "R1000"
   }
 ];
 
@@ -93,9 +163,9 @@ function ArrowIcon() {
   );
 }
 
-function WhatsAppIcon() {
+function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
       <path
         d="M7.2 18.1 4 19l.9-3.1a8 8 0 1 1 2.3 2.2Z"
         stroke="currentColor"
@@ -164,9 +234,8 @@ export default function Home() {
               </a>
             ))}
           </nav>
-          <Button href={whatsappHref}>
-            <WhatsAppIcon />
-            WhatsApp
+          <Button href="#contact">
+            Contact Us
           </Button>
         </div>
       </header>
@@ -184,9 +253,8 @@ export default function Home() {
               paying customers.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href={whatsappHref}>
-                <WhatsAppIcon />
-                Chat on WhatsApp
+              <Button href="#solutions">
+                Solutions For You
               </Button>
               <Button href="#process" variant="secondary">
                 See How It Works
@@ -271,29 +339,84 @@ export default function Home() {
 
       <section className="bg-ink py-24 text-white" id="solutions">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-brass">
               Solutions for growing businesses
             </p>
             <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-              Built For Companies That Need Dependable Growth Infrastructure
+              Simple, Transparent Pricing
             </h2>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-white/75">
+              Built for where your business is right now - with room to grow.
+            </p>
           </div>
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {services.map((service) => (
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {pricingPlans.map((plan) => (
               <article
-                key={service.title}
-                className="rounded-lg border border-white/12 bg-white/[0.06] p-7 backdrop-blur transition duration-200 hover:-translate-y-1 hover:bg-white/[0.09]"
+                key={plan.name}
+                className="flex h-full flex-col rounded-2xl border border-white/12 bg-white/[0.06] p-7 shadow-soft backdrop-blur transition duration-200 hover:-translate-y-1 hover:bg-white/[0.09]"
               >
-                <h3 className="text-2xl font-semibold">{service.title}</h3>
-                <p className="mt-5 min-h-28 leading-7 text-white/70">{service.body}</p>
-                <Button href={whatsappHref} variant="secondary">
-                  Request A Quote
-                  <ArrowIcon />
-                </Button>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brass">
+                  {plan.note}
+                </p>
+                <h3 className="mt-4 text-3xl font-semibold text-white">{plan.name}</h3>
+                <p className="mt-2 text-sm text-white/70">{plan.price}</p>
+                <h4 className="mt-6 text-xl font-semibold text-white">{plan.headline}</h4>
+                <p className="mt-4 text-white/75">{plan.description}</p>
+                <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+                  What&apos;s included:
+                </p>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-white/80">
+                  {plan.details.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brass" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-8 pt-2">
+                  <Button href={whatsappHref} variant="secondary">
+                    Request A Quote
+                    <ArrowIcon />
+                  </Button>
+                </div>
               </article>
             ))}
           </div>
+
+          <section className="mt-16 rounded-2xl border border-white/10 bg-white/[0.04] p-8 shadow-soft">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brass">
+                Add-Ons
+              </p>
+              <h3 className="mt-4 text-3xl font-semibold text-white">
+                Extend your system as your business grows
+              </h3>
+              <p className="mt-4 text-white/75">
+                Add the automations and channels you need to support more enquiries,
+                reviews, and follow-up without adding more admin.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {addOns.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-white/10 bg-white/[0.06] p-5"
+                >
+                  <h4 className="text-xl font-semibold text-white">{item.title}</h4>
+                  <p className="mt-3 text-sm leading-6 text-white/75">{item.body}</p>
+                  <p className="mt-4 text-sm font-semibold text-brass">{item.price}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <p className="mt-6 text-sm italic text-white/70">
+            Retainer fees cover platform costs, maintenance, and ongoing optimisation.
+            No hidden fees. No surprises.
+          </p>
         </div>
       </section>
 
@@ -332,15 +455,14 @@ export default function Home() {
             </h2>
             <div className="mt-8 space-y-3 text-ink/70">
               <p>WhatsApp: 069 336 8407</p>
-              <p>Email: infokindredsystems@gmail.com</p>
+              <p>Email: {emailAddress}</p>
               <p>Instagram: kindredsystems_za</p>
               <p>Facebook: kindredsystems_za</p>
               <p>LinkedIn: kindredsystems_za</p>
             </div>
             <div className="mt-8">
-              <Button href={whatsappHref}>
-                <WhatsAppIcon />
-                Chat on WhatsApp
+              <Button href={`mailto:${emailAddress}`} variant="secondary">
+                Email Us
               </Button>
             </div>
           </div>
@@ -388,7 +510,7 @@ export default function Home() {
         className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#1f8f5f] text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#16754d]"
         aria-label="Chat with Kindred Systems on WhatsApp"
       >
-        <WhatsAppIcon />
+        <WhatsAppIcon className="h-5 w-5 translate-y-[-1px]" />
       </a>
     </main>
   );

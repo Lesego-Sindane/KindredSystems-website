@@ -36,6 +36,19 @@ export default function ContactForm() {
         </a>
       </div>
 
+      <div className="mt-8 rounded-2xl border border-ink/10 bg-linen/70 p-3 shadow-soft">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-moss">
+          WhatsForm
+        </p>
+        <iframe
+          src="https://whatsform.com/oxBk-Y"
+          title="Talk To Kindred Systems WhatsForm"
+          className="mt-3 h-[520px] w-full rounded-xl border border-ink/10 bg-white"
+          loading="lazy"
+          allow="clipboard-write"
+        />
+      </div>
+
       <ul className="mt-8 space-y-3 text-sm text-ink/75">
         <li>• Faster response times for leads and appointments.</li>
         <li>• Clear enquiry capture without manual follow-up.</li>
