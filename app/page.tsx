@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactForm from "./ContactForm";
 
 const whatsappNumber = "27693368407";
 const whatsappMessage = encodeURIComponent(
@@ -322,33 +323,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="max-w-3xl">
-            <SectionLabel>Solutions in development</SectionLabel>
-            <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-              Professional Demo Environments And Case Studies In Progress
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-ink/65">
-              We are currently building and documenting client solutions.
-              Real-world case studies coming soon.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {demos.map((demo) => (
-              <article key={demo} className="rounded-lg border border-ink/10 bg-white p-6 shadow-line">
-                <div className="mb-8 h-36 rounded-md bg-[linear-gradient(135deg,#15483f,#4f6677_55%,#b38b4d)]" />
-                <h3 className="text-lg font-semibold">{demo}</h3>
-                <p className="mt-3 leading-7 text-ink/62">
-                  A polished demonstration of enquiry capture, booking clarity,
-                  and management visibility.
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-linen py-24" id="contact">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
@@ -370,38 +344,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <form
-            action="mailto:infokindredsystems@gmail.com"
-            method="post"
-            encType="text/plain"
-            className="rounded-lg border border-ink/10 bg-white p-6 shadow-soft sm:p-8"
-          >
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="grid gap-2 text-sm font-semibold text-ink/75">
-                Name
-                <input className="h-12 rounded-md border border-ink/12 px-4 outline-none transition focus:border-forest" name="name" />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-ink/75">
-                Email
-                <input className="h-12 rounded-md border border-ink/12 px-4 outline-none transition focus:border-forest" name="email" type="email" />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-ink/75 sm:col-span-2">
-                Business Name
-                <input className="h-12 rounded-md border border-ink/12 px-4 outline-none transition focus:border-forest" name="business" />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-ink/75 sm:col-span-2">
-                Message
-                <textarea className="min-h-36 rounded-md border border-ink/12 p-4 outline-none transition focus:border-forest" name="message" />
-              </label>
-            </div>
-            <button
-              type="submit"
-              className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-forest px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0f3932] sm:w-auto"
-            >
-              Let's Talk
-              <ArrowIcon />
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
