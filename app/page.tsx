@@ -6,7 +6,7 @@ const whatsappMessage = encodeURIComponent(
   "Hi Kindred Systems, I'd like to learn more about your solutions."
 );
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-const emailAddress = "infokindredsystems@gmail.com";
+const emailAddress = "hello@kindredsystems.co.za";
 
 const navItems = [
   ["Outcomes", "#outcomes"],
@@ -521,8 +521,8 @@ export default function Home() {
           </div>
           <div className="grid gap-3 text-sm text-white/68">
             <a href={whatsappHref} className="hover:text-white">069 336 8407</a>
-            <a href="mailto:infokindredsystems@gmail.com" className="hover:text-white">
-              infokindredsystems@gmail.com
+            <a href={`mailto:${emailAddress}`} className="hover:text-white">
+              {emailAddress}
             </a>
             <span>kindredsystems_za</span>
           </div>
