@@ -239,10 +239,10 @@ export default function Home() {
             <Image
               src="/images/kindred-logo.png"
               alt="Kindred Systems"
-              width={1200}
-              height={1200}
+              width={869}
+              height={348}
               priority
-              className="h-11 w-auto object-contain"
+              className="h-14 w-auto object-contain sm:h-16"
             />
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium text-ink/70 md:flex">
@@ -501,11 +501,11 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 md:grid-cols-[1fr_auto_auto]">
           <div>
             <Image
-              src="/images/kindred-logo.png"
+              src="/images/kindred-logo-footer.png"
               alt="Kindred Systems"
-              width={1200}
-              height={1200}
-              className="h-12 w-auto rounded-sm bg-white object-contain p-1.5"
+              width={869}
+              height={348}
+              className="h-20 w-auto object-contain sm:h-24"
             />
             <p className="mt-3 max-w-md leading-7 text-white/62">
               Helping businesses capture more opportunities and create better
