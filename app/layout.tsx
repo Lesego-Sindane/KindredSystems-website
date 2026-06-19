@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "Kindred Systems | Business Growth Systems for South African Service Businesses",
   description:
     "Kindred Systems helps service businesses capture more enquiries, respond faster, simplify bookings, and convert more conversations into paying customers.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png"
+  },
   openGraph: {
     title: "Kindred Systems",
     description:

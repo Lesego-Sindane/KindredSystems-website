@@ -185,12 +185,15 @@ function WhatsAppLogoIcon({ className = "h-6 w-6" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
       <path
-        d="M12.01 2.75A9.25 9.25 0 1 0 12.01 21.25 9.25 9.25 0 0 0 12.01 2.75Z"
-        fill="currentColor"
+        d="M7.2 18.1 4 19l.9-3.1a8 8 0 1 1 2.3 2.2Z"
+        stroke="currentColor"
+        strokeWidth="1.9"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
-        d="M15.48 14.08c-.14-.09-.64-.31-.79-.35-.15-.04-.26-.02-.38.08-.11.1-.46.47-.56.62-.11.15-.2.17-.35.08-.15-.09-.64-.29-1.22-.9-.56-.59-.93-1.33-.94-1.57 0-.24 0-.35.1-.46.1-.11.22-.2.34-.31.11-.11.15-.17.22-.29.07-.12.04-.21-.02-.31-.06-.11-.42-.95-.56-1.3-.13-.35-.28-.31-.4-.31h-.23c-.14 0-.35.05-.56.25-.21.2-.67.74-.67 1.78 0 1.03.72 1.87.84 2.01.11.14 1.25 1.89 3.08 2.58.42.15.78.24 1.02.31.51.13.96.12 1.27-.02.31-.13.8-.41.93-.83.14-.42.11-.77 0-.88-.1-.11-.23-.19-.43-.3Z"
-        fill="#fff"
+        d="M9 8.7c.2-.4.4-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.7 2.1 3 2.7l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.8-.7.3-1.5.3-2.5 0a8.4 8.4 0 0 1-5.6-5.5c-.3-.9-.3-1.6-.1-2Z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -236,8 +239,8 @@ export default function Home() {
             <Image
               src="/images/kindred-logo.png"
               alt="Kindred Systems"
-              width={360}
-              height={120}
+              width={1200}
+              height={1200}
               priority
               className="h-11 w-auto object-contain"
             />
@@ -500,8 +503,8 @@ export default function Home() {
             <Image
               src="/images/kindred-logo.png"
               alt="Kindred Systems"
-              width={360}
-              height={120}
+              width={1200}
+              height={1200}
               className="h-12 w-auto rounded-sm bg-white object-contain p-1.5"
             />
             <p className="mt-3 max-w-md leading-7 text-white/62">
@@ -534,7 +537,7 @@ export default function Home() {
         className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#1f8f5f] text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#16754d]"
         aria-label="Chat with Kindred Systems on WhatsApp"
       >
-        <WhatsAppLogoIcon className="h-6 w-6" />
+        <WhatsAppLogoIcon className="h-7 w-7" />
       </a>
     </main>
   );
