@@ -9,7 +9,7 @@ const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 const emailAddress = "hello@kindredsystems.co.za";
 const instagramUrl = "https://www.instagram.com/kindredsystems_za/";
 const facebookUrl = "https://www.facebook.com/profile.php?id=61590265517734";
-const linkedinUrl = "https://www.linkedin.com/in/kindred-systems-765625414";
+const linkedinUrl = "https://www.linkedin.com/company/kindredsystems-za/about/?viewAsMember=true";
 
 const navItems = [
   ["Outcomes", "#outcomes"],
@@ -198,6 +198,32 @@ function WhatsAppLogoIcon({ className = "h-6 w-6" }: { className?: string }) {
         d="M9 8.7c.2-.4.4-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.7 2.1 3 2.7l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.8-.7.3-1.5.3-2.5 0a8.4 8.4 0 0 1-5.6-5.5c-.3-.9-.3-1.6-.1-2Z"
         fill="currentColor"
       />
+    </svg>
+  );
+}
+
+function InstagramIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M13.5 20v-7h2.3l.3-2.7h-2.6V3.8c0-.8.2-1.3 1.3-1.3h1.4V.1C16 .1 15.1 0 14 0c-2.1 0-3.6 1.3-3.6 3.7v2.6H8.1V10h2.3v10h3.1Z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M6.94 8.5A1.56 1.56 0 1 0 6.94 5.38a1.56 1.56 0 0 0 0 3.12ZM5.5 9.5h2.88V18H5.5V9.5Zm4.8 0h2.76v1.16h.04c.38-.72 1.32-1.48 2.72-1.48 2.91 0 3.45 1.91 3.45 4.4V18H16.3v-7.4c0-1.76-.03-4.02-2.45-4.02-2.46 0-2.84 1.92-2.84 3.9V18H10.3V9.5Z" />
     </svg>
   );
 }
@@ -468,22 +494,25 @@ export default function Home() {
             <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
               Let Us Build The System Behind Your Next Stage Of Growth
             </h2>
-            <div className="mt-8 space-y-3 text-ink/70">
-              <p>
-                WhatsApp: <a href={whatsappHref} className="text-forest hover:underline">069 336 8407</a>
-              </p>
-              <p>
-                Email: <a href={`mailto:${emailAddress}`} className="text-forest hover:underline">{emailAddress}</a>
-              </p>
-              <p>
-                Instagram: <a href={instagramUrl} target="_blank" rel="noreferrer" className="text-forest hover:underline">kindredsystems_za</a>
-              </p>
-              <p>
-                Facebook: <a href={facebookUrl} target="_blank" rel="noreferrer" className="text-forest hover:underline">kindredsystems_za</a>
-              </p>
-              <p>
-                LinkedIn: <a href={linkedinUrl} target="_blank" rel="noreferrer" className="text-forest hover:underline">kindredsystems_za</a>
-              </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3 text-ink/70">
+              <a href={whatsappHref} aria-label="WhatsApp" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white text-forest shadow-line transition hover:-translate-y-0.5 hover:border-forest/30">
+                <WhatsAppIcon className="h-5 w-5" />
+              </a>
+              <a href={`mailto:${emailAddress}`} aria-label="Email" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white text-forest shadow-line transition hover:-translate-y-0.5 hover:border-forest/30">
+                <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 6.5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1Z" stroke="currentColor" strokeWidth="1.8" />
+                  <path d="m5 8 7 5 7-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+              <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white text-forest shadow-line transition hover:-translate-y-0.5 hover:border-forest/30">
+                <InstagramIcon className="h-5 w-5" />
+              </a>
+              <a href={facebookUrl} target="_blank" rel="noreferrer" aria-label="Facebook" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white text-forest shadow-line transition hover:-translate-y-0.5 hover:border-forest/30">
+                <FacebookIcon className="h-5 w-5" />
+              </a>
+              <a href={linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white text-forest shadow-line transition hover:-translate-y-0.5 hover:border-forest/30">
+                <LinkedInIcon className="h-5 w-5" />
+              </a>
             </div>
             <div className="mt-8">
               <Button href={`mailto:${emailAddress}`} variant="secondary">
@@ -517,13 +546,24 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className="grid gap-3 text-sm text-white/68">
-            <a href={whatsappHref} className="hover:text-white">069 336 8407</a>
-            <a href={`mailto:${emailAddress}`} className="hover:text-white">
-              {emailAddress}
+          <div className="flex flex-wrap items-center gap-3 text-sm text-white/68">
+            <a href={whatsappHref} aria-label="WhatsApp" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:bg-white/20">
+              <WhatsAppIcon className="h-5 w-5" />
             </a>
-            <a href={instagramUrl} target="_blank" rel="noreferrer" className="hover:text-white">
-              kindredsystems_za
+            <a href={`mailto:${emailAddress}`} aria-label="Email" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:bg-white/20">
+              <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6.5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1Z" stroke="currentColor" strokeWidth="1.8" />
+                <path d="m5 8 7 5 7-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+            <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:bg-white/20">
+              <InstagramIcon className="h-5 w-5" />
+            </a>
+            <a href={facebookUrl} target="_blank" rel="noreferrer" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:bg-white/20">
+              <FacebookIcon className="h-5 w-5" />
+            </a>
+            <a href={linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:bg-white/20">
+              <LinkedInIcon className="h-5 w-5" />
             </a>
           </div>
         </div>
