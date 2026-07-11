@@ -7,6 +7,9 @@ const whatsappMessage = encodeURIComponent(
 );
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 const emailAddress = "hello@kindredsystems.co.za";
+const instagramUrl = "https://www.instagram.com/kindredsystems_za/";
+const facebookUrl = "https://www.facebook.com/profile.php?id=61590265517734";
+const linkedinUrl = "https://www.linkedin.com/in/kindred-systems-765625414";
 
 const navItems = [
   ["Outcomes", "#outcomes"],
@@ -466,11 +469,21 @@ export default function Home() {
               Let Us Build The System Behind Your Next Stage Of Growth
             </h2>
             <div className="mt-8 space-y-3 text-ink/70">
-              <p>WhatsApp: 069 336 8407</p>
-              <p>Email: {emailAddress}</p>
-              <p>Instagram: kindredsystems_za</p>
-              <p>Facebook: kindredsystems_za</p>
-              <p>LinkedIn: kindredsystems_za</p>
+              <p>
+                WhatsApp: <a href={whatsappHref} className="text-forest hover:underline">069 336 8407</a>
+              </p>
+              <p>
+                Email: <a href={`mailto:${emailAddress}`} className="text-forest hover:underline">{emailAddress}</a>
+              </p>
+              <p>
+                Instagram: <a href={instagramUrl} target="_blank" rel="noreferrer" className="text-forest hover:underline">kindredsystems_za</a>
+              </p>
+              <p>
+                Facebook: <a href={facebookUrl} target="_blank" rel="noreferrer" className="text-forest hover:underline">kindredsystems_za</a>
+              </p>
+              <p>
+                LinkedIn: <a href={linkedinUrl} target="_blank" rel="noreferrer" className="text-forest hover:underline">kindredsystems_za</a>
+              </p>
             </div>
             <div className="mt-8">
               <Button href={`mailto:${emailAddress}`} variant="secondary">
@@ -509,7 +522,9 @@ export default function Home() {
             <a href={`mailto:${emailAddress}`} className="hover:text-white">
               {emailAddress}
             </a>
-            <span>kindredsystems_za</span>
+            <a href={instagramUrl} target="_blank" rel="noreferrer" className="hover:text-white">
+              kindredsystems_za
+            </a>
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-5 pt-6 text-sm text-white/45 sm:px-8">
