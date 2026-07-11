@@ -456,31 +456,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-24" id="process">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
-            <div>
-              <SectionLabel>From first message to paying customer</SectionLabel>
-              <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-                A Clearer Path From Enquiry To Revenue
-              </h2>
-            </div>
-            <div className="grid gap-4">
-              {steps.map((step, index) => (
-                <div
-                  key={step}
-                  className="grid min-h-20 grid-cols-[4rem_1fr] items-center rounded-lg border border-ink/10 bg-porcelain p-4"
-                >
-                  <span className="text-sm font-semibold text-moss">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <p className="text-lg font-semibold">{step}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Process section removed per request */}
 
       <section className="bg-linen py-24" id="contact">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">
