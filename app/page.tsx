@@ -53,52 +53,52 @@ const outcomes = [
 
 const pricingPlans = [
   {
-    name: "Starter",
-    price: "R800",
-    note: "For professional early-stage businesses",
-    headline: "WhatsApp Business App + Social Media Automation",
+    name: "Launch",
+    price: "Starting from R1,200",
+    note: "Build your professional foundation",
+    headline: "Perfect for businesses taking the first step toward a more professional operation.",
     description:
-      "For informal and early-stage businesses ready to stop missing customers.",
+      "A strong starting point for businesses that want to look sharper, operate more clearly, and create a better first impression.",
     details: [
-      "WhatsApp Business App setup and optimisation",
-      "Quick replies and FAQ auto-responses",
-      "Booking link connected to your bio and auto-replies",
-      "Lead tracking via Google Sheets",
-      "Handover and walkthrough"
-    ]
+      "Professional digital presence",
+      "Business registration included (you only pay the CIPC fee)",
+      "Essential business systems",
+      "Simple customer automation",
+      "Setup and onboarding"
+    ],
+    cta: "Start Your Journey"
   },
   {
-    name: "Growth",
-    price: "R1500 setup + R500/month",
-    note: "For businesses ready for a real system",
-    headline: "WhatsApp Cloud API + Booking Automation + Lead Capture",
+    name: "Grow",
+    price: "Starting from R2,000",
+    note: "Turn professionalism into momentum",
+    headline: "Designed for growing businesses ready to save time and deliver a more consistent customer experience.",
     description:
-      "For semi-formal businesses that are growing and need more than the basics.",
+      "A more complete setup for businesses that are growing and need stronger systems behind the scenes.",
     details: [
-      "Everything in Starter",
-      "WhatsApp Cloud API setup and integration",
-      "Automated lead capture and ranked lead list",
-      "Booking calendar with real-time availability",
-      "24-hour automated follow-up if a customer goes quiet",
-      "Monthly maintenance and optimisation",
-      "API costs covered in retainer"
-    ]
+      "Advanced customer automation",
+      "Booking systems",
+      "Professional customer communication",
+      "Lead management",
+      "Business process optimisation"
+    ],
+    cta: "Book a Discovery Call"
   },
   {
-    name: "Pro",
-    price: "R3500 setup + R1000/month",
-    note: "For businesses that mean business",
-    headline: "Full API + CRM + Unified Inbox + Monthly Reporting",
+    name: "Scale",
+    price: "Custom Investment",
+    note: "Operate with confidence",
+    headline: "For established businesses ready to streamline operations, support their team, and build systems for long-term growth.",
     description:
-      "For registered SMEs and franchises that need a complete customer operations system.",
+      "Every Scale engagement is tailored to your business, with the right mix of systems, automation, AI, and customer operations.",
     details: [
-      "Everything in Growth",
-      "Full CRM integration and sync",
-      "Unified inbox across all active channels",
-      "Monthly performance report",
-      "Priority support and system updates",
-      "All API and platform costs covered in retainer"
-    ]
+      "Tailored systems strategy",
+      "Automation and AI recommendations",
+      "Customer operations support",
+      "Team workflow optimisation",
+      "Long-term growth systems"
+    ],
+    cta: "Let's Talk"
   }
 ];
 
@@ -411,20 +411,11 @@ export default function Home() {
                   {plan.note}
                 </p>
                 <h3 className="mt-4 text-3xl font-semibold text-white">{plan.name}</h3>
-                <p className="mt-2 text-sm text-white/70">
-                  {plan.name === "Starter" ? (
-                    <>
-                      {plan.price}
-                      <span className="ml-2 text-brass">• Once-Off setup</span>
-                    </>
-                  ) : (
-                    plan.price
-                  )}
-                </p>
+                <p className="mt-3 text-lg font-semibold text-white">{plan.price}</p>
                 <h4 className="mt-6 text-xl font-semibold text-white">{plan.headline}</h4>
                 <p className="mt-4 text-white/75">{plan.description}</p>
                 <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-                  What&apos;s included:
+                  Includes:
                 </p>
                 <ul className="mt-4 space-y-3 text-sm leading-6 text-white/80">
                   {plan.details.map((item) => (
@@ -436,7 +427,7 @@ export default function Home() {
                 </ul>
                 <div className="mt-8 pt-2">
                   <Button href="#contact" variant="secondary">
-                    Get started
+                    {plan.cta}
                     <ArrowIcon />
                   </Button>
                 </div>
