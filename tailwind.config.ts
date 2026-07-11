@@ -5,17 +5,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#111827",
-        forest: "#15483f",
-        moss: "#2f6f5f",
-        steel: "#4f6677",
-        linen: "#f6f3ed",
-        porcelain: "#fbfaf7",
-        brass: "#b38b4d"
+        navy: "#1E2A38",
+        cream: "#F7F4EE",
+        sage: "#6D8C72",
+        charcoal: "#2B2B2B",
+        ink: "#2B2B2B",
+        forest: "#6D8C72",
+        moss: "#6D8C72",
+        steel: "#1E2A38",
+        linen: "#F7F4EE",
+        porcelain: "#F7F4EE",
+        brass: "#6D8C72"
       },
       boxShadow: {
-        soft: "0 24px 80px rgba(17, 24, 39, 0.12)",
-        line: "0 0 0 1px rgba(17, 24, 39, 0.08)"
+        soft: "0 20px 45px rgba(30, 42, 56, 0.08)",
+        line: "0 0 0 1px rgba(30, 42, 56, 0.08)"
       }
     }
   },

@@ -237,7 +237,7 @@ export default function Home() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#" className="flex items-center" aria-label="Kindred Systems home">
             <Image
-              src="/images/kindred-logo.png"
+              src="/images/KS%20new%20logo.png"
               alt="Kindred Systems"
               width={869}
               height={348}
@@ -290,8 +290,8 @@ export default function Home() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-[1.75rem] border border-white/70 bg-white shadow-soft">
               <Image
-                src="/images/kindred-growth-system.png"
-                alt="Organized customer enquiries, bookings, and growth signals"
+                src="/images/Dentistry%20image.png"
+                alt="A service business environment that feels personal, professional, and welcoming"
                 width={1200}
                 height={900}
                 priority
@@ -501,7 +501,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 md:grid-cols-[1fr_auto_auto]">
           <div>
             <Image
-              src="/images/kindred-logo-footer.png"
+              src="/images/KS%20new%20logo.png"
               alt="Kindred Systems"
               width={869}
               height={348}

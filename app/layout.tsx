@@ -4,26 +4,26 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kindredsystems.co.za"),
-  title: "Kindred Systems | Business Growth Systems for South African Service Businesses",
+  title: "Kindred Systems | Growth Systems for Service Businesses",
   description:
-    "Kindred Systems helps service businesses capture more enquiries, respond faster, simplify bookings, and convert more conversations into paying customers.",
+    "Kindred Systems helps South African service businesses turn everyday enquiries into organised growth with calm, reliable systems.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png"
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg"
   },
   openGraph: {
     title: "Kindred Systems",
     description:
-      "Premium growth systems for businesses that cannot afford missed enquiries.",
+      "Practical growth systems for barbers, dentists, builders, mechanics, and other service businesses.",
     url: "https://kindredsystems.co.za",
     siteName: "Kindred Systems",
     images: [
       {
-        url: "/images/kindred-growth-system.png",
+        url: "/images/Dentistry%20image.png",
         width: 1200,
         height: 900,
-        alt: "Kindred Systems business growth visual"
+        alt: "Kindred Systems serving a service business with calm, human-centred growth"
       }
     ],
     locale: "en_ZA",
