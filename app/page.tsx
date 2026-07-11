@@ -394,7 +394,7 @@ export default function Home() {
               Solutions for growing businesses
             </p>
             <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-              Simple, Transparent Pricing
+              Kindred Systems Pricing
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-white/75">
               Built for where your business is right now - with room to grow.
