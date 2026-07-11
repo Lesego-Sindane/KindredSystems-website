@@ -308,78 +308,50 @@ export default function Home() {
             <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
               Great businesses eventually outgrow manual systems.
             </h2>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-ink/75">
-              Every successful business reaches a point where talent alone isn't enough.
-              <br />
-              <br />
-              More customers mean more enquiries, more bookings, more follow-ups and more
-              moving parts.
-              <br />
-              <br />
-              What once felt manageable gradually becomes overwhelming—not because you're
-              doing anything wrong, but because your business has grown beyond the systems
-              supporting it.
-            </p>
           </div>
 
           <div className="mt-16 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[1.75rem] border border-ink/10 bg-porcelain p-8 shadow-soft">
-              <div className="rounded-3xl border border-forest/10 bg-white p-8 shadow-soft">
-                <p className="text-sm uppercase tracking-[0.22em] text-sage">
-                  Your business grows.
-                </p>
-                <div className="mt-10 space-y-8">
-                  {[
-                    "More enquiries",
-                    "More customers",
-                    "More bookings",
-                    "More admin",
-                    "More pressure"
-                  ].map((step, index) => (
-                    <div key={step} className="flex items-start gap-4">
-                      <div className="mt-1 h-3 w-3 rounded-full bg-ink" />
-                      <p className="text-base font-semibold text-ink">{step}</p>
+            <div className="relative rounded-[1.75rem] border border-ink/10 bg-sage/5 p-8 shadow-soft">
+              <div className="pointer-events-none absolute left-10 top-10 h-[calc(100%-4rem)] w-px bg-forest/15" />
+              <div className="space-y-6">
+                {[
+                  { label: "More enquiries", description: "Every new lead should be a clear opportunity, not a hidden task." },
+                  { label: "More customers", description: "Growth is a good problem when the system behind it is built to scale." },
+                  { label: "More bookings", description: "The right process turns interest into confirmed appointments." },
+                  { label: "More admin", description: "Manual handoffs and notes create noise, not momentum." },
+                  { label: "More pressure", description: "Without better systems, your team spends energy on workarounds." }
+                ].map((step, index) => (
+                  <div key={step.label} className="relative flex gap-5 rounded-[1.5rem] border border-white/70 bg-white p-6 shadow-soft">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-forest text-white text-sm font-semibold shadow-sm">
+                      {index + 1}
                     </div>
-                  ))}
-                  <div className="mt-8 rounded-3xl border border-forest/15 bg-forest/5 p-6">
-                    <p className="text-base font-semibold text-ink">
-                      Without better systems, growth starts working against you.
-                    </p>
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.18em] text-sage">
+                        Step {index + 1}
+                      </p>
+                      <p className="mt-3 text-lg font-semibold text-ink">{step.label}</p>
+                      <p className="mt-2 text-sm leading-6 text-ink/70">{step.description}</p>
+                    </div>
                   </div>
-                  <div className="mt-6 rounded-3xl border border-ink/10 bg-white p-6 text-ink">
-                    <p className="font-semibold">That's where Kindred comes in.</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
             <div className="grid gap-6">
-              <article className="rounded-[1.5rem] border border-ink/10 bg-white p-8 shadow-soft">
-                <p className="text-sm uppercase tracking-[0.22em] text-sage">More enquiries</p>
-                <h3 className="mt-4 text-2xl font-semibold text-ink">
-                  Capture every lead before it disappears.
-                </h3>
-                <p className="mt-4 text-ink/75">
-                  Move enquiries into a system that keeps them visible, prioritized, and actionable.
-                </p>
+              <article className="rounded-[1.75rem] border border-forest/10 bg-white p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.22em] text-sage">Your next step</p>
+                <h3 className="mt-4 text-3xl font-semibold text-ink">Without better systems, growth starts working against you.</h3>
+                <p className="mt-4 text-ink/75">The problem isn’t growth—it’s having more demand than your current operations can handle.</p>
               </article>
-              <article className="rounded-[1.5rem] border border-ink/10 bg-white p-8 shadow-soft">
-                <p className="text-sm uppercase tracking-[0.22em] text-sage">More bookings</p>
-                <h3 className="mt-4 text-2xl font-semibold text-ink">
-                  Make scheduling feel seamless for customers and teams.
-                </h3>
-                <p className="mt-4 text-ink/75">
-                  Reduce back-and-forth bookings with automated confirmation and reminders.
-                </p>
+              <article className="rounded-[1.75rem] border border-ink/10 bg-porcelain p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.22em] text-sage">Where Kindred helps</p>
+                <h3 className="mt-4 text-3xl font-semibold text-ink">A calmer system for every customer interaction.</h3>
+                <p className="mt-4 text-ink/75">Kindred helps service businesses capture customers clearly, manage enquiries smoothly, and keep teams focused.</p>
               </article>
-              <article className="rounded-[1.5rem] border border-ink/10 bg-white p-8 shadow-soft">
-                <p className="text-sm uppercase tracking-[0.22em] text-sage">More pressure</p>
-                <h3 className="mt-4 text-2xl font-semibold text-ink">
-                  Keep growth from becoming chaos.
-                </h3>
-                <p className="mt-4 text-ink/75">
-                  Create a calm operating system that supports your team through every busy season.
-                </p>
+              <article className="rounded-[1.75rem] border border-ink/10 bg-white p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.22em] text-sage">The outcome</p>
+                <h3 className="mt-4 text-3xl font-semibold text-ink">More customers, less chaos.</h3>
+                <p className="mt-4 text-ink/75">Your business can grow without the extra pressure of manual operations and missed opportunities.</p>
               </article>
             </div>
           </div>
