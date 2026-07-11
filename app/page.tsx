@@ -306,21 +306,82 @@ export default function Home() {
           <div className="max-w-3xl">
             <SectionLabel>The hidden leak</SectionLabel>
             <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-              Every Missed Message Is A Missed Opportunity
+              Great businesses eventually outgrow manual systems.
             </h2>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-ink/75">
+              Every successful business reaches a point where talent alone isn't enough.
+              <br />
+              <br />
+              More customers mean more enquiries, more bookings, more follow-ups and more
+              moving parts.
+              <br />
+              <br />
+              What once felt manageable gradually becomes overwhelming—not because you're
+              doing anything wrong, but because your business has grown beyond the systems
+              supporting it.
+            </p>
           </div>
-          <div className="mt-12 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {problems.map((problem, index) => (
-              <div
-                key={problem}
-                className="group flex min-h-28 items-start gap-4 rounded-lg border border-ink/10 bg-porcelain p-5 transition duration-200 hover:-translate-y-1 hover:border-forest/25 hover:bg-white hover:shadow-line"
-              >
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest/10 text-sm font-semibold text-forest">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="text-base font-medium leading-7 text-ink/75">{problem}</p>
+
+          <div className="mt-16 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-[1.75rem] border border-ink/10 bg-porcelain p-8 shadow-soft">
+              <div className="rounded-3xl border border-forest/10 bg-white p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.22em] text-sage">
+                  Your business grows.
+                </p>
+                <div className="mt-10 space-y-8">
+                  {[
+                    "More enquiries",
+                    "More customers",
+                    "More bookings",
+                    "More admin",
+                    "More pressure"
+                  ].map((step, index) => (
+                    <div key={step} className="flex items-start gap-4">
+                      <div className="mt-1 h-3 w-3 rounded-full bg-ink" />
+                      <p className="text-base font-semibold text-ink">{step}</p>
+                    </div>
+                  ))}
+                  <div className="mt-8 rounded-3xl border border-forest/15 bg-forest/5 p-6">
+                    <p className="text-base font-semibold text-ink">
+                      Without better systems, growth starts working against you.
+                    </p>
+                  </div>
+                  <div className="mt-6 rounded-3xl border border-ink/10 bg-white p-6 text-ink">
+                    <p className="font-semibold">That's where Kindred comes in.</p>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div className="grid gap-6">
+              <article className="rounded-[1.5rem] border border-ink/10 bg-white p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.22em] text-sage">More enquiries</p>
+                <h3 className="mt-4 text-2xl font-semibold text-ink">
+                  Capture every lead before it disappears.
+                </h3>
+                <p className="mt-4 text-ink/75">
+                  Move enquiries into a system that keeps them visible, prioritized, and actionable.
+                </p>
+              </article>
+              <article className="rounded-[1.5rem] border border-ink/10 bg-white p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.22em] text-sage">More bookings</p>
+                <h3 className="mt-4 text-2xl font-semibold text-ink">
+                  Make scheduling feel seamless for customers and teams.
+                </h3>
+                <p className="mt-4 text-ink/75">
+                  Reduce back-and-forth bookings with automated confirmation and reminders.
+                </p>
+              </article>
+              <article className="rounded-[1.5rem] border border-ink/10 bg-white p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.22em] text-sage">More pressure</p>
+                <h3 className="mt-4 text-2xl font-semibold text-ink">
+                  Keep growth from becoming chaos.
+                </h3>
+                <p className="mt-4 text-ink/75">
+                  Create a calm operating system that supports your team through every busy season.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
