@@ -16,38 +16,38 @@ const navItems = [
 ];
 
 const problems = [
-  "Customers message but never receive a response",
-  "Enquiries get buried in busy inboxes",
-  "Appointment requests are handled manually",
-  "Follow-ups are inconsistent",
-  "Admin tasks consume valuable time",
-  "Potential customers slip through the cracks"
+  "Your customer experience feels inconsistent",
+  "Important details depend on memory and manual notes",
+  "Appointments and requests move too slowly",
+  "Follow-ups slip through the cracks",
+  "Your team spends more time managing work than doing it",
+  "Growth makes the business feel busier, not better"
 ];
 
 const outcomes = [
   {
-    title: "Capture More Enquiries",
-    body: "Never lose potential customers because a message was missed."
+    title: "Appear More Professional",
+    body: "Create a polished first impression through every customer touchpoint."
   },
   {
-    title: "Respond Faster",
-    body: "Give customers quick responses while your team stays focused."
+    title: "Operate With Consistency",
+    body: "Give your team a reliable system they can trust day after day."
   },
   {
-    title: "Simplify Bookings",
-    body: "Reduce back-and-forth conversations and make scheduling easy."
+    title: "Make Booking Feel Seamless",
+    body: "Turn enquiries into appointments with a more refined process."
   },
   {
     title: "Stay Organized",
-    body: "Keep customer enquiries in one structured operating system."
+    body: "Keep your workflows, customers, and operations aligned in one place."
   },
   {
     title: "Improve Follow-Up",
-    body: "Make sure interested prospects do not disappear before buying."
+    body: "Make sure every opportunity gets the attention it deserves."
   },
   {
-    title: "Scale Efficiently",
-    body: "Handle more demand without increasing admin workload."
+    title: "Scale With Confidence",
+    body: "Handle more demand without adding operational friction."
   }
 ];
 
@@ -266,8 +266,8 @@ export default function Home() {
               Your business deserves to look as professional as the work you do.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/68 sm:text-xl">
-              We help service businesses build professional systems that create confidence,
-              simplify customer communication and give owners more time to focus on what they do best.
+              We help service businesses build polished systems that create confidence,
+              strengthen the way they operate, and give owners more time to focus on what they do best.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="#solutions">
@@ -346,7 +346,7 @@ export default function Home() {
               <article className="rounded-[1.75rem] border border-ink/10 bg-porcelain p-8 shadow-soft">
                 <p className="text-sm uppercase tracking-[0.22em] text-sage">Where Kindred helps</p>
                 <h3 className="mt-4 text-3xl font-semibold text-ink">A calmer system for every customer interaction.</h3>
-                <p className="mt-4 text-ink/75">Kindred helps service businesses capture customers clearly, manage enquiries smoothly, and keep teams focused.</p>
+                <p className="mt-4 text-ink/75">Kindred helps service businesses present a more polished brand, operate with clarity, and keep teams focused on their work.</p>
               </article>
               <article className="rounded-[1.75rem] border border-ink/10 bg-white p-8 shadow-soft">
                 <p className="text-sm uppercase tracking-[0.22em] text-sage">The outcome</p>

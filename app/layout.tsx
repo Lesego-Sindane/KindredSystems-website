@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kindredsystems.co.za"),
   title: "Kindred Systems | Growth Systems for Service Businesses",
   description:
-    "Kindred Systems helps South African service businesses turn everyday enquiries into organised growth with calm, reliable systems.",
+    "Kindred Systems helps South African service businesses build polished, professional systems that make every customer interaction feel as good as the work behind it.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kindred Systems",
     description:
-      "Practical growth systems for barbers, dentists, builders, mechanics, and other service businesses.",
+      "Practical systems for barbers, dentists, builders, mechanics, and other service businesses that help them appear as professional as their work.",
     url: "https://kindredsystems.co.za",
     siteName: "Kindred Systems",
     images: [

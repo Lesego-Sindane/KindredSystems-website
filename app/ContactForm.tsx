@@ -8,7 +8,7 @@ export default function ContactForm() {
         A calm first step towards better growth
       </h3>
       <p className="mt-4 text-base leading-7 text-charcoal/70">
-        We help you remove the noise from enquiries and bookings so your team can
+        We help you remove the noise from daily operations so your team can
         focus on serving customers with confidence.
       </p>
 
