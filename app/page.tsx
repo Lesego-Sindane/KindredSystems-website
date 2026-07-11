@@ -402,19 +402,31 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {pricingPlans.map((plan) => (
+            {pricingPlans.map((plan, index) => (
               <article
                 key={plan.name}
-                className="flex h-full flex-col rounded-2xl border border-white/12 bg-white/[0.06] p-7 shadow-soft backdrop-blur transition duration-200 hover:-translate-y-1 hover:bg-white/[0.09]"
+                className={`flex h-full flex-col rounded-[1.75rem] border p-7 shadow-soft backdrop-blur transition duration-200 hover:-translate-y-1 ${
+                  index === 1
+                    ? "border-brass/40 bg-white/[0.12] shadow-[0_24px_60px_rgba(0,0,0,0.24)]"
+                    : "border-white/12 bg-white/[0.06] hover:bg-white/[0.09]"
+                }`}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brass">
-                  {plan.note}
-                </p>
-                <h3 className="mt-4 text-3xl font-semibold text-white">{plan.name}</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brass">
+                    {plan.note}
+                  </p>
+                  {index === 1 ? (
+                    <span className="rounded-full border border-brass/30 bg-brass/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brass">
+                      Most popular
+                    </span>
+                  ) : null}
+                </div>
+                <h3 className="mt-5 text-3xl font-semibold text-white">{plan.name}</h3>
                 <p className="mt-3 text-lg font-semibold text-white">{plan.price}</p>
+                <div className="mt-6 h-px w-full bg-white/10" />
                 <h4 className="mt-6 text-xl font-semibold text-white">{plan.headline}</h4>
                 <p className="mt-4 text-white/75">{plan.description}</p>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+                <p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
                   Includes:
                 </p>
                 <ul className="mt-4 space-y-3 text-sm leading-6 text-white/80">
