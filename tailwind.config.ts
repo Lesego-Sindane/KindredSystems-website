@@ -15,7 +15,7 @@ const config: Config = {
         steel: "#1E2A38",
         linen: "#F7F4EE",
         porcelain: "#F7F4EE",
-        brass: "#C59A2E"
+        brass: "#D6B85A"
       },
       boxShadow: {
         soft: "0 20px 45px rgba(30, 42, 56, 0.08)",

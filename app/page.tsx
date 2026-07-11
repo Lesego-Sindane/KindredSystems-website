@@ -447,33 +447,7 @@ export default function Home() {
             ))}
           </div>
 
-          <section className="mt-16 rounded-2xl border border-white/10 bg-white/[0.04] p-8 shadow-soft">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brass">
-                Add-Ons
-              </p>
-              <h3 className="mt-4 text-3xl font-semibold text-white">
-                Extend your system as your business grows
-              </h3>
-              <p className="mt-4 text-white/75">
-                Add the automations and channels you need to support more enquiries,
-                reviews, and follow-up without adding more admin.
-              </p>
-            </div>
-
-            <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {addOns.map((item) => (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.06] p-5"
-                >
-                  <h4 className="text-xl font-semibold text-white">{item.title}</h4>
-                  <p className="mt-3 text-sm leading-6 text-white/75">{item.body}</p>
-                  <p className="mt-4 text-sm font-semibold text-brass">{item.price}</p>
-                </article>
-              ))}
-            </div>
-          </section>
+          {/* Add-Ons removed per design guidance */}
 
           <p className="mt-6 text-sm italic text-white/70">
             Retainer fees cover platform costs, maintenance, and ongoing optimisation.
