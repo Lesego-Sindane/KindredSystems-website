@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import ContactForm from "./ContactForm";
 
 const whatsappNumber = "27693368407";
@@ -170,14 +173,14 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
       <path
-        d="M7.2 18.1 4 19l.9-3.1a8 8 0 1 1 2.3 2.2Z"
+        d="M6.5 18.2 4.8 19.2l.9-2.9A8.1 8.1 0 1 1 6.5 18.2Z"
         stroke="currentColor"
         strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M9 8.7c.2-.4.4-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.7 2.1 3 2.7l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.8-.7.3-1.5.3-2.5 0a8.4 8.4 0 0 1-5.6-5.5c-.3-.9-.3-1.6-.1-2Z"
+        d="M8.8 8.6c.2-.4.4-.5.8-.5h.4c.2 0 .3.1.4.3l.7 1.6c.1.3.1.5-.1.7l-.4.5a6 6 0 0 0 2.7 2.7l.5-.6c.2-.2.4-.2.6-.1l1.6.7c.2.1.3.3.3.5v.4c0 .3-.2.6-.5.7a8.7 8.7 0 0 1-4.2.3 7.3 7.3 0 0 1-4.8-4.8 5.7 5.7 0 0 1-.1-2.2Z"
         fill="currentColor"
       />
     </svg>
@@ -215,7 +218,7 @@ function InstagramIcon({ className = "h-5 w-5" }: { className?: string }) {
 function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M13.5 20v-7h2.3l.3-2.7h-2.6V3.8c0-.8.2-1.3 1.3-1.3h1.4V.1C16 .1 15.1 0 14 0c-2.1 0-3.6 1.3-3.6 3.7v2.6H8.1V10h2.3v10h3.1Z" />
+      <path d="M14.2 20v-7.3h2.4l.4-2.8h-2.8V4.3c0-.8.2-1.4 1.4-1.4h1.5V.8c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.8v2.2H9.4v2.8h2.4V20h2.4Z" />
     </svg>
   );
 }
@@ -223,7 +226,7 @@ function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
 function LinkedInIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M6.94 8.5A1.56 1.56 0 1 0 6.94 5.38a1.56 1.56 0 0 0 0 3.12ZM5.5 9.5h2.88V18H5.5V9.5Zm4.8 0h2.76v1.16h.04c.38-.72 1.32-1.48 2.72-1.48 2.91 0 3.45 1.91 3.45 4.4V18H16.3v-7.4c0-1.76-.03-4.02-2.45-4.02-2.46 0-2.84 1.92-2.84 3.9V18H10.3V9.5Z" />
+      <path d="M7.1 8.4a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8ZM5.8 9.5h2.6V18H5.8V9.5Zm4.2 0h2.5v1.1h.1c.3-.7 1.2-1.5 2.5-1.5 2.7 0 3.2 1.8 3.2 4.1V18h-2.6v-7.3c0-1.7-.1-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.6V18H10V9.5Z" />
     </svg>
   );
 }
@@ -233,6 +236,69 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
     <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-moss">
       {children}
     </p>
+  );
+}
+
+function ChatIcon({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
+      <path
+        d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 19 15.5H9l-4 3v-3H5A1.5 1.5 0 0 1 3.5 13V7A1.5 1.5 0 0 1 5 5.5Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M8 9.5h8M8 12h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function XIcon({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
+      <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function FloatingChat() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+      {isOpen ? (
+        <div className="w-72 rounded-[1.25rem] border border-ink/10 bg-white p-4 shadow-soft">
+          <p className="text-sm font-semibold text-navy">Need help choosing the right system?</p>
+          <p className="mt-2 text-sm leading-6 text-charcoal/70">
+            Start a quick chat with Kindred Systems.
+          </p>
+          <div className="mt-4 flex flex-col gap-2">
+            <a
+              href={whatsappHref}
+              className="inline-flex items-center justify-center rounded-full bg-[#1f8f5f] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#16754d]"
+            >
+              Chat on WhatsApp
+            </a>
+            <a
+              href={`mailto:${emailAddress}`}
+              className="inline-flex items-center justify-center rounded-full border border-ink/10 bg-cream px-4 py-2.5 text-sm font-semibold text-navy transition hover:bg-[#f2e9d8]"
+            >
+              Email us
+            </a>
+          </div>
+        </div>
+      ) : null}
+
+      <button
+        type="button"
+        onClick={() => setIsOpen((value) => !value)}
+        aria-label="Toggle chat options"
+        className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-forest text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#0f3932]"
+      >
+        {isOpen ? <XIcon className="h-6 w-6" /> : <ChatIcon className="h-6 w-6" />}
+      </button>
+    </div>
   );
 }
 
@@ -572,13 +638,7 @@ export default function Home() {
         </div>
       </footer>
 
-      <a
-        href={whatsappHref}
-        className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#1f8f5f] text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#16754d]"
-        aria-label="Chat with Kindred Systems on WhatsApp"
-      >
-        <WhatsAppLogoIcon className="h-7 w-7" />
-      </a>
+      <FloatingChat />
     </main>
   );
 }
