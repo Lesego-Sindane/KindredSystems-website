@@ -9,6 +9,7 @@
   --cream: #f7f4ee;
   --sage: #6d8c72;
   --charcoal: #2b2b2b;
+  --brass: #C59A2E; /* warm gold accent */
 }
 
 * {
@@ -43,7 +44,7 @@ p {
 }
 
 ::selection {
-  background: var(--sage);
+  background: var(--brass);
   color: white;
 }
 
