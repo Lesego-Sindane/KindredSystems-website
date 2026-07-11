@@ -242,7 +242,7 @@ export default function Home() {
               width={869}
               height={348}
               priority
-              className="h-14 w-auto object-contain sm:h-16"
+              className="h-16 w-auto object-contain sm:h-20"
             />
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium text-ink/70 md:flex">
@@ -263,12 +263,11 @@ export default function Home() {
           <div>
             <SectionLabel>Premium growth systems</SectionLabel>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-normal text-ink sm:text-6xl lg:text-7xl">
-              Stop Losing Customers Before You Even Speak To Them
+              Your business deserves to look as professional as the work you do.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/68 sm:text-xl">
-              We help South African service businesses capture every enquiry,
-              respond faster, simplify bookings, and turn more conversations into
-              paying customers.
+              We help service businesses build professional systems that create confidence,
+              simplify customer communication and give owners more time to focus on what they do best.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="#solutions">
