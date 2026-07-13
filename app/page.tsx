@@ -208,7 +208,7 @@ function InstagramIcon({ className = "h-5 w-5" }: { className?: string }) {
 function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M13.6 20v-7.1h2.4l.3-2.5h-2.7V4.2c0-.7.2-1.2 1.2-1.2h1.3V1.1c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.1-3.2 3.2v2.2H8.9v2.5h2.3V20h2.4Z" />
+      <path d="M14 4h2.2v3.3h-1.3c-.7 0-1 .3-1 1v1.4H16l-.2 2.6h-1.9V20h-2.5v-7.7H9.6v-2.6h1.8V7.7c0-1.8 1.1-2.7 3-2.7Z" />
     </svg>
   );
 }
@@ -216,7 +216,7 @@ function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
 function LinkedInIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M6.8 7.8a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6ZM5.5 8.9h2.5V18H5.5V8.9Zm4.1 0h2.4v1.2h.1c.3-.6 1.1-1.3 2.3-1.3 2.5 0 2.9 1.7 2.9 3.8V18H14.7v-7.1c0-1.7-.1-3.8-2.3-3.8-2.1 0-2.4 1.6-2.4 3.2V18H9.6V8.9Z" />
+      <path d="M7 7.2a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6ZM5.7 8.6h2.5V18H5.7V8.6Zm4.1 0h2.4v1.2h.1c.3-.7 1.1-1.4 2.3-1.4 2.5 0 2.9 1.7 2.9 3.8V18h-2.5v-7.4c0-1.9-.1-4.3-2.6-4.3-2.1 0-2.5 1.6-2.5 3.2V18H9.8V8.6Z" />
     </svg>
   );
 }
