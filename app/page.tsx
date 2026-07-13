@@ -216,7 +216,7 @@ function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
 function LinkedInIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M7 7.2a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6ZM5.7 8.6h2.5V18H5.7V8.6Zm4.1 0h2.4v1.2h.1c.3-.7 1.1-1.4 2.3-1.4 2.5 0 2.9 1.7 2.9 3.8V18h-2.5v-7.4c0-1.9-.1-4.3-2.6-4.3-2.1 0-2.5 1.6-2.5 3.2V18H9.8V8.6Z" />
+      <path d="M6.8 6.8a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8ZM5.4 8.2h2.4V18H5.4V8.2Zm4.2 0h2.3v1.1h.1c.3-.6 1.1-1.3 2.3-1.3 2.4 0 2.9 1.6 2.9 3.6V18h-2.4v-7.4c0-1.7-.1-3.8-2.3-3.8-2.1 0-2.4 1.6-2.4 3.1V18H9.6V8.2Z" />
     </svg>
   );
 }
