@@ -17,9 +17,9 @@ export default function ContactForm() {
           Quick contact
         </p>
         <iframe
-          src="https://whatsform.com/oxBk-Y"
-          title="Talk To Kindred Systems WhatsForm"
-          className="mt-3 h-[520px] w-full rounded-xl border border-navy/10 bg-white"
+          src="https://tally.so/r/KYZZ17"
+          title="Kindred Systems enquiry form"
+          className="mt-3 h-[760px] w-full rounded-xl border border-navy/10 bg-white"
           loading="lazy"
           allow="clipboard-write"
         />
