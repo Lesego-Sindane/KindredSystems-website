@@ -318,7 +318,7 @@ function Button({
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-porcelain text-ink">
-      <header className="fixed inset-x-0 top-0 z-40 border-b border-ink/10 bg-porcelain/90 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-40 overflow-hidden border-b border-ink/10 bg-porcelain/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#" className="flex items-center" aria-label="Kindred Systems home">
             <Image
@@ -327,7 +327,7 @@ export default function Home() {
               width={869}
               height={348}
               priority
-              className="h-16 w-auto object-contain sm:h-20"
+              className="h-20 w-auto object-contain sm:h-24"
             />
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium text-ink/70 md:flex">
