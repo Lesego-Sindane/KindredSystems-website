@@ -17,6 +17,7 @@ const linkedinUrl = "https://www.linkedin.com/company/kindredsystems-za/about/?v
 const navItems = [
   ["Outcomes", "#outcomes"],
   ["Solutions", "#solutions"],
+  ["Blog", "/blog"],
   ["Process", "#process"],
   ["Contact", "#contact"]
 ];
