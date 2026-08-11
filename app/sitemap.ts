@@ -1,7 +1,11 @@
 import type { MetadataRoute } from "next";
-import { posts } from "./blog/posts";
+import { getPublishedPosts } from "./blog/posts";
+
+export const dynamic = "force-dynamic";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getPublishedPosts();
+
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: "https://kindredsystems.co.za",
@@ -21,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...posts.map((post) => ({
       url: `https://kindredsystems.co.za/blog/${post.slug}`,
-      lastModified: new Date("2026-08-08"),
+      lastModified: new Date(post.publishDate ?? "2026-08-08"),
       changeFrequency: "monthly" as const,
       priority: 0.7
     }))

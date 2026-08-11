@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { posts } from "../posts";
+import { getPublishedPosts } from "../posts";
+
+export const dynamic = "force-dynamic";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -9,15 +11,9 @@ type BlogPostPageProps = {
   }>;
 };
 
-export function generateStaticParams() {
-  return posts.map((post) => ({
-    slug: post.slug
-  }));
-}
-
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = posts.find((item) => item.slug === slug);
+  const post = getPublishedPosts().find((item) => item.slug === slug);
 
   if (!post) {
     return {
@@ -55,7 +51,7 @@ function ArrowIcon() {
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = posts.find((item) => item.slug === slug);
+  const post = getPublishedPosts().find((item) => item.slug === slug);
 
   if (!post) {
     notFound();

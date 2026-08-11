@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { posts } from "./posts";
+import { getPublishedPosts } from "./posts";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Blog | Kindred Systems",
@@ -29,6 +31,9 @@ const categories = [
   "AI tools",
   "New technology",
   "South African small business",
+  "Digital credibility",
+  "Local SEO",
+  "WhatsApp Business",
   "Local compliance",
   "Customer experience",
   "Kindred Systems updates"
@@ -49,6 +54,8 @@ function ArrowIcon() {
 }
 
 export default function BlogPage() {
+  const posts = getPublishedPosts();
+
   return (
     <main className="min-h-screen bg-[#fbfaf7] text-ink">
       <header className="border-b border-ink/10 bg-white">
