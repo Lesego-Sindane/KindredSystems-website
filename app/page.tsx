@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import ContactForm from "./ContactForm";
 
 const whatsappNumber = "27693368407";
 const whatsappMessage = encodeURIComponent(
@@ -19,7 +18,7 @@ const navItems = [
   ["Solutions", "#solutions"],
   ["Blog", "/blog"],
   ["Process", "#process"],
-  ["Contact", "#contact"]
+  ["Contact", "/contact"]
 ];
 
 const problems = [
@@ -338,7 +337,7 @@ export default function Home() {
               </a>
             ))}
           </nav>
-          <Button href="#contact">
+          <Button href="/contact">
             Contact Us
           </Button>
         </div>
@@ -524,7 +523,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-8 pt-2">
-                  <Button href="#contact" variant="secondary">
+                  <Button href="/contact" variant="secondary">
                     {plan.cta}
                     <ArrowIcon />
                   </Button>
@@ -572,13 +571,22 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-8">
-              <Button href={`mailto:${emailAddress}`} variant="secondary">
-                Email Us
-              </Button>
+                <Button href={`mailto:${emailAddress}`} variant="secondary">
+                  Email Us
+                </Button>
+              </div>
+            </div>
+            <div className="rounded-[1.5rem] border border-ink/10 bg-white p-6 shadow-soft">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sage">Quick contact</p>
+              <h3 className="mt-4 text-2xl font-semibold text-ink">Start the conversation</h3>
+              <p className="mt-4 text-sm leading-7 text-ink/70">We help you remove the noise from daily operations so your team can focus on serving customers with confidence.</p>
+              <div className="mt-6">
+                <a href="/contact" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold bg-forest text-white shadow-soft hover:-translate-y-0.5">
+                  Open contact form
+                </a>
+              </div>
             </div>
           </div>
-          <ContactForm />
-        </div>
       </section>
 
       <footer className="bg-ink py-12 text-white">
