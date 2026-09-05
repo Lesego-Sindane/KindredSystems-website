@@ -466,8 +466,8 @@ export const posts: BlogPost[] = [
   {
     slug: "how-to-make-your-business-look-legitimate-in-south-africa",
     title: "How to make your business look legitimate in South Africa",
-    date: "14 September 2026",
-    publishDate: "2026-09-14",
+    date: "9 September 2026",
+    publishDate: "2026-09-09",
     category: "South African small business",
     readTime: "5 min read",
     excerpt:
@@ -520,8 +520,8 @@ export const posts: BlogPost[] = [
   {
     slug: "google-business-profile-for-south-african-service-businesses",
     title: "Google Business Profile for South African service businesses",
-    date: "21 September 2026",
-    publishDate: "2026-09-21",
+    date: "11 September 2026",
+    publishDate: "2026-09-11",
     category: "Local SEO",
     readTime: "5 min read",
     excerpt:
@@ -574,8 +574,8 @@ export const posts: BlogPost[] = [
   {
     slug: "why-customers-ignore-small-businesses-that-look-unprofessional",
     title: "Why customers ignore small businesses that look unprofessional",
-    date: "28 September 2026",
-    publishDate: "2026-09-28",
+    date: "14 September 2026",
+    publishDate: "2026-09-14",
     category: "Customer experience",
     readTime: "4 min read",
     excerpt:
@@ -628,8 +628,8 @@ export const posts: BlogPost[] = [
   {
     slug: "whatsapp-business-mistakes-that-make-you-lose-credibility",
     title: "WhatsApp Business mistakes that make you lose credibility",
-    date: "5 October 2026",
-    publishDate: "2026-10-05",
+    date: "16 September 2026",
+    publishDate: "2026-09-16",
     category: "WhatsApp Business",
     readTime: "5 min read",
     excerpt:
@@ -682,8 +682,8 @@ export const posts: BlogPost[] = [
   {
     slug: "the-cheapest-way-to-make-your-business-look-established",
     title: "The cheapest way to make your business look established",
-    date: "12 October 2026",
-    publishDate: "2026-10-12",
+    date: "18 September 2026",
+    publishDate: "2026-09-18",
     category: "Digital credibility",
     readTime: "5 min read",
     excerpt:

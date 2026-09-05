@@ -29,14 +29,15 @@ export const metadata: Metadata = {
 
 const categories = [
   "AI tools",
+  "AI news",
   "New technology",
   "South African small business",
+  "South African government",
+  "How-to guides",
   "Digital credibility",
   "Local SEO",
   "WhatsApp Business",
-  "Local compliance",
-  "Customer experience",
-  "Kindred Systems updates"
+  "Customer experience"
 ];
 
 function ArrowIcon() {
@@ -100,6 +101,7 @@ export default function BlogPage() {
           <p className="mt-5 text-lg leading-8 text-ink/70">
             Useful, plain-English writing for owners who want to understand what is changing,
             what matters locally, and what to do next without getting buried in tech talk.
+            New articles are scheduled for Mondays, Wednesdays, and Fridays.
           </p>
         </div>
 
@@ -168,12 +170,11 @@ export default function BlogPage() {
 
       <section className="mx-auto max-w-5xl px-5 py-12">
         <div className="max-w-3xl border border-ink/10 bg-white p-6">
-          <h2 className="text-xl font-semibold tracking-normal">Weekly research idea</h2>
+          <h2 className="text-xl font-semibold tracking-normal">Publishing rhythm</h2>
           <p className="mt-3 leading-7 text-ink/70">
-            A weekly blog workflow can track credible tech, AI, payments, and South African
-            business sources, draft a short article, and queue it for review before publishing.
-            The important part is keeping a human approval step so the posts stay accurate,
-            local, and written in the Kindred voice.
+            The blog queue is set to release new articles three times a week. Posts are written
+            for South African business owners, with practical notes on AI, digital trust,
+            customer experience, and local business operations.
           </p>
           <div className="mt-5">
             <Link href="/#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-forest">
