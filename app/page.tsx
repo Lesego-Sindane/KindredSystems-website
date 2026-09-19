@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
 
 const whatsappNumber = "27693368407";
 const whatsappMessage = encodeURIComponent(
@@ -169,32 +169,6 @@ const clients = [
     facebook: "https://www.facebook.com/profile.php?id=61592838853091",
     instagram: "https://www.instagram.com/crispycrumbs_za/",
     website: "https://crispycrumbs.co.za"
-  },
-  {
-    name: "Client name two",
-    category: "Local business",
-    description:
-      "Clearer customer touchpoints and practical systems that make it easier to respond quickly, stay organised, and look the part.",
-    logo: "CN",
-    image: null,
-    imageAlt: "",
-    tiktok: "#",
-    facebook: "#",
-    instagram: "#",
-    website: "#"
-  },
-  {
-    name: "Client name three",
-    category: "Growing team",
-    description:
-      "A considered foundation for growth, bringing the brand, booking flow, and behind-the-scenes operations into better alignment.",
-    logo: "CN",
-    image: null,
-    imageAlt: "",
-    tiktok: "#",
-    facebook: "#",
-    instagram: "#",
-    website: "#"
   }
 ];
 
@@ -385,8 +359,6 @@ function Button({
 }
 
 export default function Home() {
-  const [selectedClient, setSelectedClient] = useState(0);
-
   return (
     <main className="min-h-screen overflow-hidden bg-porcelain text-ink">
       <header className="fixed inset-x-0 top-0 z-40 overflow-hidden border-b border-ink/10 bg-porcelain/90 backdrop-blur-xl">
@@ -562,60 +534,26 @@ export default function Home() {
 
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {clients.map((client, index) => (
-              <button
+              <Link
                 key={client.name}
-                type="button"
-                onClick={() => setSelectedClient(index)}
-                aria-pressed={selectedClient === index}
-                className={`group text-left transition duration-200 ${selectedClient === index ? "-translate-y-1" : "hover:-translate-y-1"}`}
+                href="/kindredsystems-crispycrumbs"
+                className="group text-left transition duration-200 hover:-translate-y-1"
               >
-                <div className={`relative flex aspect-[1.35/1] items-end overflow-hidden rounded-[1.5rem] border p-6 shadow-line ${selectedClient === index ? "border-forest/40 bg-forest" : "border-ink/10 bg-porcelain"}`}>
+                <div className="relative flex aspect-[1.35/1] items-end overflow-hidden rounded-[1.5rem] border border-ink/10 bg-porcelain p-6 shadow-line transition group-hover:border-forest/40 group-hover:bg-forest">
                   {client.image ? (
                     <Image src={client.image} alt={client.imageAlt} fill className="object-cover opacity-25 mix-blend-multiply" />
                   ) : null}
                   <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-lg font-semibold text-forest shadow-soft">
                     {client.logo}
                   </div>
-                  <span className={`absolute right-6 top-6 text-xs font-semibold uppercase tracking-[0.2em] ${selectedClient === index ? "text-white/65" : "text-sage"}`}>
+                  <span className="absolute right-6 top-6 text-xs font-semibold uppercase tracking-[0.2em] text-sage transition group-hover:text-white/65">
                     0{index + 1}
                   </span>
                 </div>
                 <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-sage">{client.category}</p>
                 <h3 className="mt-2 text-2xl font-semibold text-ink">{client.name}</h3>
-              </button>
+              </Link>
             ))}
-          </div>
-
-          <div className="mt-8 grid gap-8 rounded-[1.75rem] border border-ink/10 bg-linen p-7 shadow-soft sm:p-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sage">{clients[selectedClient].category}</p>
-              <h3 className="mt-4 text-3xl font-semibold text-ink sm:text-4xl">{clients[selectedClient].name}</h3>
-            </div>
-            <div>
-              <p className="max-w-2xl text-lg leading-8 text-ink/72">{clients[selectedClient].description}</p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a href={clients[selectedClient].tiktok} target="_blank" rel="noreferrer" aria-label={`${clients[selectedClient].name} on TikTok`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-forest px-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0f3932]">
-                  <TikTokIcon />
-                  TikTok
-                  <ExternalLinkIcon className="h-3.5 w-3.5" />
-                </a>
-                <a href={clients[selectedClient].facebook} target="_blank" rel="noreferrer" aria-label={`${clients[selectedClient].name} on Facebook`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-ink/10 bg-white px-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30">
-                  <FacebookIcon className="h-4 w-4" />
-                  Facebook
-                  <ExternalLinkIcon className="h-3.5 w-3.5" />
-                </a>
-                <a href={clients[selectedClient].instagram} target="_blank" rel="noreferrer" aria-label={`${clients[selectedClient].name} on Instagram`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-ink/10 bg-white px-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30">
-                  <InstagramIcon className="h-4 w-4" />
-                  Instagram
-                  <ExternalLinkIcon className="h-3.5 w-3.5" />
-                </a>
-                <a href={clients[selectedClient].website} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-ink/10 bg-white px-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30">
-                  <GlobeIcon />
-                  Website
-                  <ExternalLinkIcon className="h-3.5 w-3.5" />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
