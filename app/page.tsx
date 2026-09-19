@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const whatsappNumber = "27693368407";
 const whatsappMessage = encodeURIComponent(
