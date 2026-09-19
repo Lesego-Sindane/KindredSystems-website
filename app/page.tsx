@@ -163,8 +163,8 @@ const clients = [
     description:
       "A warm, polished digital presence for a bakery that wants to make every first impression feel as good as the work behind it.",
     logo: "CC",
-    image: null,
-    imageAlt: "",
+    image: "/images/crispy%20crumbs%20logo%20bg%20removed.png",
+    imageAlt: "Crispy Crumbs logo",
     tiktok: "https://www.tiktok.com/@crispycrumbs_za",
     facebook: "https://www.facebook.com/profile.php?id=61592838853091",
     instagram: "https://www.instagram.com/crispycrumbs_za/",
@@ -541,7 +541,7 @@ export default function Home() {
               >
                 <div className="relative flex aspect-[1.35/1] items-end overflow-hidden rounded-[1.5rem] border border-ink/10 bg-porcelain p-6 shadow-line transition group-hover:border-forest/40 group-hover:bg-forest">
                   {client.image ? (
-                    <Image src={client.image} alt={client.imageAlt} fill className="object-cover opacity-25 mix-blend-multiply" />
+                    <Image src={client.image} alt={client.imageAlt} fill className="object-contain p-10 mix-blend-multiply" />
                   ) : null}
                   <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-lg font-semibold text-forest shadow-soft">
                     {client.logo}

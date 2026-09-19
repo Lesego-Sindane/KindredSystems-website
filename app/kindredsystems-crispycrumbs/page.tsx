@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const links = [
@@ -16,6 +17,15 @@ export default function CrispyCrumbsPage() {
         </Link>
 
         <section className="mt-16 max-w-3xl">
+          <div className="flex h-40 w-40 items-center justify-center rounded-[1.5rem] border border-ink/10 bg-white p-5 shadow-soft">
+            <Image
+              src="/images/crispy%20crumbs%20logo%20bg%20removed.png"
+              alt="Crispy Crumbs logo"
+              width={320}
+              height={320}
+              className="h-full w-full object-contain"
+            />
+          </div>
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sage">Bakery</p>
           <h1 className="mt-4 text-5xl font-semibold tracking-normal sm:text-7xl">Crispy Crumbs</h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/72">
