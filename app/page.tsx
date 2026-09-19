@@ -16,6 +16,7 @@ const linkedinUrl = "https://www.linkedin.com/company/kindredsystems-za/about/?v
 const navItems = [
   ["Outcomes", "#outcomes"],
   ["Solutions", "#solutions"],
+  ["Clients", "#clients"],
   ["Blog", "/blog"],
   ["Process", "#process"],
   ["Contact", "/contact"]
@@ -155,6 +156,48 @@ const demos = [
   "Professional services lead room"
 ];
 
+const clients = [
+  {
+    name: "Crispy Crumbs",
+    category: "Bakery",
+    description:
+      "A warm, polished digital presence for a bakery that wants to make every first impression feel as good as the work behind it.",
+    logo: "CC",
+    image: null,
+    imageAlt: "",
+    tiktok: "https://www.tiktok.com/@crispycrumbs_za",
+    facebook: "https://www.facebook.com/profile.php?id=61592838853091",
+    instagram: "https://www.instagram.com/crispycrumbs_za/",
+    website: "https://crispycrumbs.co.za"
+  },
+  {
+    name: "Client name two",
+    category: "Local business",
+    description:
+      "Clearer customer touchpoints and practical systems that make it easier to respond quickly, stay organised, and look the part.",
+    logo: "CN",
+    image: null,
+    imageAlt: "",
+    tiktok: "#",
+    facebook: "#",
+    instagram: "#",
+    website: "#"
+  },
+  {
+    name: "Client name three",
+    category: "Growing team",
+    description:
+      "A considered foundation for growth, bringing the brand, booking flow, and behind-the-scenes operations into better alignment.",
+    logo: "CN",
+    image: null,
+    imageAlt: "",
+    tiktok: "#",
+    facebook: "#",
+    instagram: "#",
+    website: "#"
+  }
+];
+
 function ArrowIcon() {
   return (
     <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="none">
@@ -213,6 +256,14 @@ function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
   );
 }
 
+function TikTokIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M14.2 4c.2 1.8 1.2 3.1 3.1 3.3v2.5c-1.1-.1-2.1-.4-3-1v5.8c0 3.6-2.5 5.4-5.1 5.4-2.5 0-4.7-1.8-4.7-4.5 0-2.8 2.3-4.6 5.2-4.6.3 0 .7 0 1 .1v2.6c-.3-.1-.6-.2-1-.2-1.3 0-2.5.8-2.5 2.1 0 1.2 1 2 2.1 2 1.4 0 2.4-.8 2.4-2.6V4h2.5Z" />
+    </svg>
+  );
+}
+
 function LinkedInIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -248,6 +299,24 @@ function XIcon({ className = "h-6 w-6" }: { className?: string }) {
   return (
     <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
       <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ExternalLinkIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
+      <path d="M14 5h5v5M19 5l-8 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M18 13v4.5a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 5 17.5v-10A1.5 1.5 0 0 1 6.5 6H11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function GlobeIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M3.8 12h16.4M12 3.5c2 2.2 3 5.05 3 8.5s-1 6.3-3 8.5c-2-2.2-3-5.05-3-8.5s1-6.3 3-8.5Z" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   );
 }
@@ -316,6 +385,8 @@ function Button({
 }
 
 export default function Home() {
+  const [selectedClient, setSelectedClient] = useState(0);
+
   return (
     <main className="min-h-screen overflow-hidden bg-porcelain text-ink">
       <header className="fixed inset-x-0 top-0 z-40 overflow-hidden border-b border-ink/10 bg-porcelain/90 backdrop-blur-xl">
@@ -468,6 +539,83 @@ export default function Home() {
                 <p className="mt-4 leading-7 text-ink/65">{outcome.body}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24" id="clients">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div className="max-w-3xl">
+              <SectionLabel>Selected clients</SectionLabel>
+              <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
+                Good work deserves a good place to live.
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-ink/68">
+                A look at the businesses we help present more clearly, connect with customers, and grow with confidence.
+              </p>
+            </div>
+            <p className="max-w-xs text-sm leading-6 text-ink/55">
+              Click a client to explore the work and visit their digital home.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {clients.map((client, index) => (
+              <button
+                key={client.name}
+                type="button"
+                onClick={() => setSelectedClient(index)}
+                aria-pressed={selectedClient === index}
+                className={`group text-left transition duration-200 ${selectedClient === index ? "-translate-y-1" : "hover:-translate-y-1"}`}
+              >
+                <div className={`relative flex aspect-[1.35/1] items-end overflow-hidden rounded-[1.5rem] border p-6 shadow-line ${selectedClient === index ? "border-forest/40 bg-forest" : "border-ink/10 bg-porcelain"}`}>
+                  {client.image ? (
+                    <Image src={client.image} alt={client.imageAlt} fill className="object-cover opacity-25 mix-blend-multiply" />
+                  ) : null}
+                  <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-lg font-semibold text-forest shadow-soft">
+                    {client.logo}
+                  </div>
+                  <span className={`absolute right-6 top-6 text-xs font-semibold uppercase tracking-[0.2em] ${selectedClient === index ? "text-white/65" : "text-sage"}`}>
+                    0{index + 1}
+                  </span>
+                </div>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-sage">{client.category}</p>
+                <h3 className="mt-2 text-2xl font-semibold text-ink">{client.name}</h3>
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-8 rounded-[1.75rem] border border-ink/10 bg-linen p-7 shadow-soft sm:p-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sage">{clients[selectedClient].category}</p>
+              <h3 className="mt-4 text-3xl font-semibold text-ink sm:text-4xl">{clients[selectedClient].name}</h3>
+            </div>
+            <div>
+              <p className="max-w-2xl text-lg leading-8 text-ink/72">{clients[selectedClient].description}</p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a href={clients[selectedClient].tiktok} target="_blank" rel="noreferrer" aria-label={`${clients[selectedClient].name} on TikTok`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-forest px-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0f3932]">
+                  <TikTokIcon />
+                  TikTok
+                  <ExternalLinkIcon className="h-3.5 w-3.5" />
+                </a>
+                <a href={clients[selectedClient].facebook} target="_blank" rel="noreferrer" aria-label={`${clients[selectedClient].name} on Facebook`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-ink/10 bg-white px-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30">
+                  <FacebookIcon className="h-4 w-4" />
+                  Facebook
+                  <ExternalLinkIcon className="h-3.5 w-3.5" />
+                </a>
+                <a href={clients[selectedClient].instagram} target="_blank" rel="noreferrer" aria-label={`${clients[selectedClient].name} on Instagram`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-ink/10 bg-white px-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30">
+                  <InstagramIcon className="h-4 w-4" />
+                  Instagram
+                  <ExternalLinkIcon className="h-3.5 w-3.5" />
+                </a>
+                <a href={clients[selectedClient].website} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-ink/10 bg-white px-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-forest/30">
+                  <GlobeIcon />
+                  Website
+                  <ExternalLinkIcon className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -168,23 +168,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-5 py-12">
-        <div className="max-w-3xl border border-ink/10 bg-white p-6">
-          <h2 className="text-xl font-semibold tracking-normal">Publishing rhythm</h2>
-          <p className="mt-3 leading-7 text-ink/70">
-            The blog queue is set to release new articles three times a week. Posts are written
-            for South African business owners, with practical notes on AI, digital trust,
-            customer experience, and local business operations.
-          </p>
-          <div className="mt-5">
-            <Link href="/#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-forest">
-              Plan the automation
-              <ArrowIcon />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <footer className="border-t border-ink/10 bg-white py-8">
         <div className="mx-auto flex max-w-5xl flex-col gap-4 px-5 text-sm text-ink/60 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright 2026 Kindred Systems. All rights reserved.</p>
