@@ -62,7 +62,6 @@ const outcomes = [
 const pricingPlans = [
   {
     name: "Launch",
-    price: "Starting from R1,200",
     note: "Build your professional foundation",
     headline: "Perfect for businesses taking the first step toward a more professional operation.",
     description:
@@ -78,7 +77,6 @@ const pricingPlans = [
   },
   {
     name: "Grow",
-    price: "Starting from R2,000",
     note: "Turn professionalism into momentum",
     headline: "Designed for growing businesses ready to save time and deliver a more consistent customer experience.",
     description:
@@ -94,7 +92,6 @@ const pricingPlans = [
   },
   {
     name: "Scale",
-    price: "Custom Investment",
     note: "Operate with confidence",
     headline: "For established businesses ready to streamline operations, support their team, and build systems for long-term growth.",
     description:
@@ -107,39 +104,6 @@ const pricingPlans = [
       "Long-term growth systems"
     ],
     cta: "Let's Talk"
-  }
-];
-
-const addOns = [
-  {
-    title: "Facebook DM Automation",
-    body: "Auto-respond to page messages and capture leads",
-    price: "R500 once-off"
-  },
-  {
-    title: "Instagram DM Automation",
-    body: "Reply to DMs and story replies automatically",
-    price: "R500 once-off"
-  },
-  {
-    title: "Meta Unified Inbox",
-    body: "Both channels, one bot logic",
-    price: "R800 once-off (save R200)"
-  },
-  {
-    title: "Google Review Requester",
-    body: "Auto-send a review request after every booking",
-    price: "R200 once-off"
-  },
-  {
-    title: "Promo Broadcasts",
-    body: "Send bulk WhatsApp messages to your lead list",
-    price: "R80/broadcast"
-  },
-  {
-    title: "Landing Page",
-    body: "A one-page website to link your leads to for more info.",
-    price: "R1000"
   }
 ];
 
@@ -566,7 +530,7 @@ export default function Home() {
               Solutions for growing businesses
             </p>
             <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-              Kindred Systems Pricing
+              Kindred Systems Solutions
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-white/75">
               Built for where your business is right now - with room to grow.
@@ -594,7 +558,6 @@ export default function Home() {
                   ) : null}
                 </div>
                 <h3 className="mt-5 text-3xl font-semibold text-white">{plan.name}</h3>
-                <p className="mt-3 text-lg font-semibold text-white">{plan.price}</p>
                 <div className="mt-6 h-px w-full bg-white/10" />
                 <h4 className="mt-6 text-xl font-semibold text-white">{plan.headline}</h4>
                 <p className="mt-4 text-white/75">{plan.description}</p>
