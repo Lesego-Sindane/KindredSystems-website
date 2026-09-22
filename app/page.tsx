@@ -667,9 +667,12 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sage">Quick contact</p>
               <h3 className="mt-4 text-2xl font-semibold text-ink">Start the conversation</h3>
               <p className="mt-4 text-sm leading-7 text-ink/70">We help you remove the noise from daily operations so your team can focus on serving customers with confidence.</p>
-              <div className="mt-6">
+              <div className="mt-6 flex flex-wrap gap-3">
                 <a href="/contact" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold bg-forest text-white shadow-soft hover:-translate-y-0.5">
                   Open contact form
+                </a>
+                <a href="https://calendly.com/infokindredsystems/30min" target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-forest px-5 text-sm font-semibold text-forest transition hover:-translate-y-0.5 hover:bg-forest/5">
+                  Book a call
                 </a>
               </div>
             </div>
